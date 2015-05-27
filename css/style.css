@@ -1,0 +1,261 @@
+/* Web Fonts --------- */
+
+@font-face {
+	font-family: 'Source Code';
+	src: url('../fonts/SourceCodePro-Black.otf'),
+		 url('../fonts/SourceCodePro-Bold.otf'),
+		 url('../fonts/SourceCodePro-ExtraLight.otf'),
+		 url('../fonts/SourceCodePro-Light.otf'),
+		 url('../fonts/SourceCodePro-Medium.otf'),
+		 url('../fonts/SourceCodePro-Regular.otf'),
+		 url('../fonts/SourceCodePro-Semibold.otf');
+}
+
+/* Base Styles --------- */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #878787;
+	margin: 0;
+	/* here we see that with font: we can combine values
+	font-weight: normal;
+	font-size: 1em; /* 16px *//*
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	*/
+	font: normal 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+	font-family: 'Source Code', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 5.625rem; /* 90px / 16px */
+	color: rgba(255, 140, 0, .8); /* alpha values are 0-1 */
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1.3;
+	text-shadow: 3px 3px 5px rgba(0,0,0, .8);
+	margin: 12px 0 0 ;
+}
+
+h2 {
+	font-size: 3.3125em; /* 53px/16px */
+	font-weight: normal;
+	line-height: 1.1;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font-size: 1.25em; /* 20px/16px */
+	color: #48525c;
+	line-height: 1.2;
+	margin-bottom: 1.7em; /* 1.7 x 20px = 34px */
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+ul,
+ol {
+	margin: 30px 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+/* ID Selectors */
+
+#main-footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: solid 10px orange;
+	text-align: center;
+}
+
+/* Class Selectors */
+
+.main-header {
+	padding-top: 100px;
+	max-height: 650px;
+	height: 850px;
+	background: linear-gradient(black, transparent 90%),
+				linear-gradient(0deg, white, transparent),
+				black url('../img/strc_icon_skull_bunny_cross_800x800.png') no-repeat center;
+	background-size: contain;
+}
+
+.title {
+	color: white;
+	font-size: 1.625rem; /* 26px/16px */
+	text-shadow: 1px 1px 1px rgba(0,0,0, .8);
+	letter-spacing: .065em;
+	font-weight: 200;
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
+}
+
+.secondary-content {
+	padding: 80px 0px 70px;
+	/* border-bottom: 2px solid #dfe2e6; */
+}
+
+.callout {
+	font-size: 1.25em;
+	border-bottom: 3px solid;
+	padding: 0 9px 3px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.primary-content,
+.secondary-content {
+	width: 75%;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: auto;
+	max-width: 100%;
+}
+
+.primary-content,
+.main-header {
+	text-align: center;
+}
+
+.wildlife {
+	/* text color */
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0,0,0, .8);
+	background-color: grey;
+	/* padding can be written in a shorthand
+	padding-top: 100px;
+	padding-right: 120px;
+	padding-bottom: 100px;
+	padding-left: 120px;
+	you can actually combine top and bottom and right and left.
+	- ! you can also have 3 values, top, sides, bottom.
+	padding: 100px 120px;
+	 */
+	padding: 5% 12%;
+
+	border-top: 10px solid orange;
+	margin: 55px 0 30px;
+	background: radial-gradient(rgba(0, 0, 0, 0.65), black),
+				#434a52 url('../img/strc_icon_skull_bunny_800x800_alpha.png') no-repeat center;
+	background-size: contain;
+	box-shadow: 0px 20px 15px -10px rgba(0, 0, 0, .8);
+	border-radius: 10px;
+}
+
+.t-border {
+	border-top: 2px solid lightgrey;
+}
+
+.b-border {
+	border-bottom: .32rem solid darkorange;
+}
+
+/* Floated Columns */
+
+.projects,
+.tutorials {
+	width: 46.5%;
+}
+
+/* Float Clearfix --------- */
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Media Queries ------- */
+
+@media (max-width: 1024px) {
+	.primary-content,
+	.secondary-content {
+		width: 90%;
+	}
+	.wildlife {
+		padding: 10% 12%;
+		margin: 50px 0 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.primary-content,
+	.secondary-content {
+		width: 100%;
+		padding: 20px;
+		border-top: none;
+	}
+	/* lowering the padding and height at smaller screen sizes */
+	.main-header {
+		max-height: 380px;
+		padding: 50px 25px 0;
+	}
+	.title {
+		font-size: 1.3rem;
+		border: none;
+	}
+	h1 {
+		font-size: 5rem;
+		line-height: 1.1;
+	}
+	.intro {
+		font-size: 1rem;
+	}
+	.projects,
+	.tutorials {
+		float: none;
+		width: 100%;
+	}
+	.main-footer {
+		padding: 20px 0;
+	}
+	/* you can hide things, too 
+	.arrow {
+		display: none;
+	}*/
+}
+
+/*
+@media (min-width: 481px) and (max-width: 700px) {
+	body {
+		background: seagreen;
+	}
+	p {
+		color: white;
+	}
+}
+*/
+
+/* Psuedo Selectors ------- */
+
+a:link {
+	color: rgb(255, 169, 73);
+	text-decoration: none;
+}
+
+a:visited {
+	color: rgb(255, 169, 73);
+}
+
+a:hover {
+	color: rgba(255, 169, 73, .4); /* alphas are 0-1 */
+}
+
+a:active {
+	color: coral;
+}
+

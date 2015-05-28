@@ -1,16 +1,20 @@
-fieldset {
-	display	:	inline-block;
-	vertical-align	: top;
-}
-
 .wrapper div {
 	display		: inline-block;
 	vertical-align	: top;
 }
 
 #order_entry {
-	background	: lightblue;
 	min-width	: 400px;
+	background	: lightblue;
+	line-height	: 2em;
+}
+
+#order_entry li {
+	list-style	: none;
+}
+
+#order_items {
+	background	: green;
 }
 
 #menu_items {
@@ -20,5 +24,5 @@ fieldset {
 
 #queue_view {
 	background	: yellow;
-	width	: 90%;
+	min-width	: 800px;
 }

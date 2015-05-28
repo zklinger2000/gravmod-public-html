@@ -12,14 +12,30 @@
 	<h1>Foodcart</h1>
 	</header>
 	<div class='wrapper'>
-		<fieldset id='order_entry'>
-			<legend>New Order</legend>
-			<ol id='order_list'>
-				<li><label for='cust_name'>Name:</label>
-				<input type='text' id='cust_name'></li>
-				<li>Customer Order</li>
-			</ol>
-		</fieldset>		
+		<div id='order_entry'>
+			<ul>
+				<li>
+					<label for='cust_name'>Name:</label>
+					<input type='text' id='cust_name'><br>
+				</li>
+				<li>
+					<label for='party_size'>Party Size:</label>
+					<select name="select">
+						<option value="vaue1">1</option> 
+						<option value="value2" selected>2</option>
+						<option value="value3">3</option>
+						<option value="value4">4</option>
+						<option value="value5">5</option>
+						<option value="value6">6</option>
+					</select><br>
+				</li>
+				<li>
+					<label for='order_items'>Order Items</label>
+					<ol id='order_items'>
+					</ol>
+				</li>
+			</ul>
+		</div>		
 		<div id='menu_items'>
 			<ol id='menu_list'>
 				<li>Appetizers</li>

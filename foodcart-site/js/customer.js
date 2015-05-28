@@ -19,5 +19,12 @@ Customer.prototype = {
 							},
 	addItem		: function(item) {
 								this.order.push(item);
+							},
+	toString	:	function() {
+								console.log(this.check_in);
 							}
 };
+
+function Take_Order(obj) {
+	console.log(obj.toString());
+}

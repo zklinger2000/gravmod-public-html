@@ -1,0 +1,19 @@
+.wrapper div {
+	display		: inline-block;
+	vertical-align	: top;
+}
+
+#order_entry {
+	background	: lightblue;
+	min-width	: 400px;
+}
+
+#menu_items {
+	background	: pink;
+	min-width	: 400px;
+}
+
+#queue_view {
+	background	: yellow;
+	width	: 90%;
+}

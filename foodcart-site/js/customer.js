@@ -1,30 +1,31 @@
-//Customer object definitions
-function Customer(name) {
+//Order object definitions
+function Order(name) {
 	this.name = name;
-	this.order = [];
+	this.items = [];
 	this.check_in = Date.now();
 	this.check_out = 0;
 	this.wait_time = 0;
 }
 //setting constructor type
-Customer.prototype = {
-	constructor: Customer
+Order.prototype = {
+	constructor: Order
 };
 //
 //methods:
 //
-Customer.prototype = {
-	readName	: function(element) {
-								console.log(element);
+Order.prototype = {
+	getName		: function() {
+								return this.name;
 							},
 	addItem		: function(item) {
-								this.order.push(item);
+								this.items.push(item);
 							},
 	toString	:	function() {
 								console.log(this.check_in);
 							}
 };
 
-function Take_Order(obj) {
-	console.log(obj.toString());
+function getOrderEntry() {
+	this.list = document.getElementById('order_list');
+	console.log(this.list.childNodes[4]);
 }

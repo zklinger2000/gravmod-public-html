@@ -26,6 +26,8 @@ Order.prototype = {
 };
 
 function getOrderEntry() {
-	this.list = document.getElementById('order_list');
-	console.log(this.list.childNodes[4]);
+	this.cust_name = document.getElementById('cust_name').value;
+	var to_add = new Order(this.cust_name);
+	this.order_items = document.getElementById('order_items');
+	console.log(this.cust_name);
 }

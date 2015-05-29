@@ -35,7 +35,6 @@ var create_temp_order = function() {
 	var opt_value6 = document.createElement("option");				//<select>
 	var dollar_sign = document.createElement("text");					//<text> '$'
   var price_label = document.createElement("label");				//<label>
-  var edit_price_label = document.createElement("input");		//<input>
   var edit_button = document.createElement("button");				//<button>
   var delete_button = document.createElement("button");			//<button>
 
@@ -79,7 +78,6 @@ var create_temp_order = function() {
   list_item.appendChild(edit_cust_label);
   list_item.appendChild(dollar_sign);
   list_item.appendChild(price_label);
-  list_item.appendChild(edit_price_label);
   list_item.appendChild(edit_button);
   list_item.appendChild(delete_button);
   

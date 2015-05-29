@@ -23,6 +23,9 @@ var create_temp_order = function() {
 //=========================================================================
   //VARIABLES
   var list_item = document.createElement("li");							//<li>
+  var cust_label = document.createElement("label");					//<label>
+  var edit_cust_label = document.createElement("input");		//<input>
+  var party_label = document.createElement("label");				//<label>
 	var edit_party = document.createElement("select");				//<select>
 	var opt_value1 = document.createElement("option");				//<select>
 	var opt_value2 = document.createElement("option");				//<select>
@@ -30,9 +33,7 @@ var create_temp_order = function() {
 	var opt_value4 = document.createElement("option");				//<select>
 	var opt_value5 = document.createElement("option");				//<select>
 	var opt_value6 = document.createElement("option");				//<select>
-  var cust_label = document.createElement("label");					//<label>
-  var edit_cust_label = document.createElement("input");		//<input>
-	var dollar_sign = document.createElement("p");						//<p> for '$'
+	var dollar_sign = document.createElement("text");					//<text> '$'
   var price_label = document.createElement("label");				//<label>
   var edit_price_label = document.createElement("input");		//<input>
   var edit_button = document.createElement("button");				//<button>
